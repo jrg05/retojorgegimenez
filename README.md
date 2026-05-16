@@ -1,4 +1,13 @@
-# retojorgegimenez
-Reto Practico Master QA y Automatizacion
+# Mobile Automation Framework
 
-Proyecto de automatización mobile para My Demo App utilizando Appium y Page Object Model.
+Proyecto base de automatización mobile con:
+
+- Appium
+- WebdriverIO
+- POM
+- Jenkins
+
+## Ejecutar
+
+npm install
+npm test

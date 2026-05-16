@@ -1,0 +1,9 @@
+{
+  "name": "mobile-automation",
+  "version": "1.0.0",
+  "scripts": {
+    "android": "wdio run configs/android.conf.js",
+    "ios": "wdio run configs/ios.conf.js",
+    "test": "wdio run wdio.conf.js"
+  }
+}
