@@ -1,12 +1,9 @@
 class CartPage {
-  constructor(driver) {
-    this.driver = driver;
-    this.checkoutBtn = "~checkout";
-  }
+  get checkoutBtn() { return "~checkout"; }
 
-  async proceedToCheckout() {
-    await this.driver.$(this.checkoutBtn).click();
+  async checkout() {
+    await $(this.checkoutBtn).click();
   }
 }
 
-module.exports = CartPage;
+module.exports = new CartPage();
