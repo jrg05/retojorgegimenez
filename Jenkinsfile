@@ -1,18 +1,31 @@
-{
-  "name": "mobile-automation",
-  "version": "1.0.0",
-  "description": "Mobile automation framework with Appium + POM",
-  "scripts": {
-    "test": "wdio run configs/wdio.conf.js",
-    "test:android": "wdio run configs/wdio.android.conf.js",
-    "test:ios": "wdio run configs/wdio.ios.conf.js"
-  },
-  "dependencies": {
-    "webdriverio": "^8.0.0",
-    "@wdio/cli": "^8.0.0",
-    "@wdio/local-runner": "^8.0.0",
-    "@wdio/mocha-framework": "^8.0.0",
-    "@wdio/appium-service": "^8.0.0",
-    "appium": "^2.0.0"
-  }
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('Run Android Tests') {
+            steps {
+                sh 'npm run test:android'
+            }
+        }
+
+        stage('Run iOS Tests') {
+            steps {
+                sh 'npm run test:ios'
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'evidence/screenshots/**/*.png'
+            echo 'Execution completed'
+        }
+    }
 }
