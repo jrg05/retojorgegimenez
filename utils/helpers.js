@@ -1,10 +1,8 @@
-const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+const fs = require("fs");
 
-const log = (message) => {
-  console.log(`[LOG]: ${message}`);
-};
+async function screenshot(driver, name) {
+  const img = await driver.takeScreenshot();
+  fs.writeFileSync(`evidence/${name}.png`, img, "base64");
+}
 
-module.exports = {
-  wait,
-  log
-};
+module.exports = { screenshot };
