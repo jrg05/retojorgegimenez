@@ -1,17 +1,14 @@
 class ProductsPage {
-  constructor(driver) {
-    this.driver = driver;
-    this.firstProduct = "~product_1";
-    this.addToCartBtn = "~addToCart";
+  get firstProduct() { return "~product_1"; }
+  get addToCart() { return "~addToCart"; }
+
+  async selectProduct() {
+    await $(this.firstProduct).click();
   }
 
-  async selectFirstProduct() {
-    await this.driver.$(this.firstProduct).click();
-  }
-
-  async addToCart() {
-    await this.driver.$(this.addToCartBtn).click();
+  async addToCartItem() {
+    await $(this.addToCart).click();
   }
 }
 
-module.exports = ProductsPage;
+module.exports = new ProductsPage();
