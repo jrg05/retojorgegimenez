@@ -1,13 +1,30 @@
 # Mobile Automation Framework
 
-Proyecto base de automatización mobile con:
+## App Under Test
+My Demo App (SauceLabs)
 
+- Android: com.saucelabs.mydemoapp.android
+- iOS: com.saucelabs.mydemoapp.ios
+
+## Tecnologías
 - Appium
-- WebdriverIO
-- POM
-- Jenkins
+- WebDriverIO
+- Mocha
+- Jenkins CI
 
-## Ejecutar
-
+## Instalación
 npm install
-npm test
+
+## Ejecución
+
+### Android
+npm run test:android
+
+### iOS
+npm run test:ios
+
+## Evidencias
+Carpeta /evidence
+
+## Objetivo
+Automatizar flujos críticos de negocio
