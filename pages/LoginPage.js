@@ -1,12 +1,21 @@
 class LoginPage {
-  get username() { return "~username"; }
-  get password() { return "~password"; }
-  get loginBtn() { return "~loginBtn"; }
 
-  async login(user, pass) {
-    await $(this.username).setValue(user);
-    await $(this.password).setValue(pass);
-    await $(this.loginBtn).click();
+  get usernameField() {
+    return $('~username');
+  }
+
+  get passwordField() {
+    return $('~password');
+  }
+
+  get loginButton() {
+    return $('~loginBtn');
+  }
+
+  async login(username, password) {
+    await this.usernameField.setValue(username);
+    await this.passwordField.setValue(password);
+    await this.loginButton.click();
   }
 }
 
