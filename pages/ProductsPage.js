@@ -1,13 +1,19 @@
 class ProductsPage {
-  get firstProduct() { return "~product_1"; }
-  get addToCart() { return "~addToCart"; }
 
-  async selectProduct() {
-    await $(this.firstProduct).click();
+  get firstProduct() {
+    return $('~product_1');
   }
 
-  async addToCartItem() {
-    await $(this.addToCart).click();
+  get addToCartButton() {
+    return $('~addToCart');
+  }
+
+  async selectFirstProduct() {
+    await this.firstProduct.click();
+  }
+
+  async addProductToCart() {
+    await this.addToCartButton.click();
   }
 }
 
