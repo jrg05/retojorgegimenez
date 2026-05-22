@@ -1,8 +1,11 @@
 class CartPage {
-  get checkoutBtn() { return "~checkout"; }
 
-  async checkout() {
-    await $(this.checkoutBtn).click();
+  get checkoutButton() {
+    return $('~checkout');
+  }
+
+  async proceedToCheckout() {
+    await this.checkoutButton.click();
   }
 }
 
