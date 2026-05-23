@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# Reports
+reports/
+
+# Evidence screenshots
+evidence/screenshots/
+
+# Appium logs
+*.log
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Temporary files
+tmp/
+temp/
+
+# Coverage
+coverage/
