@@ -28,3 +28,20 @@ Carpeta /evidence
 
 ## Objetivo
 Automatizar flujos críticos de negocio
+
+
+## Arquitectura
+
+ Page Object Model (POM).
+
+## Sistema Operativo
+- Android
+- iOS
+
+## Escenarios de test
+- Login
+- Add to Cart
+- Checkout
+
+## CI/CD
+Jenkins Pipeline included.
